@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title> user </title>
+  <% include head.ejs %>
+ </head>
+ <body>
+ 	<div class="container">
+ 		<table class="table">
+ 			<tbody>
+ 				<tr>
+ 					<td>
+ 						<input type="text" disabled value="<%= row['employeeNumber'] %>">
+ 					</td>
+ 				</tr>
+ 				<tr>
+ 					<td>
+ 						<input type="text" value="<%= row['email'] %>">
+ 					</td>
+ 				</tr>
+ 				<tr>
+ 					<td>
+ 						<input type="text" value="<%= row['firstName'] %>">
+ 					</td>
+ 				</tr>
+ 				<tr>
+ 					<td>
+ 						<input type="text" value="<%= row['lastName'] %>">
+ 					</td>
+ 				</tr>
+ 				<tr>
+ 					<td>
+ 						<input type="text" value="<%= row['extension'] %>">
+ 					</td>
+ 				</tr>
+ 				<tr>
+ 					<td>
+ 						<input type="text" value="<%= row['jobTitle'] %>">
+ 					</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+ 	</div>
+ </body>
+</html>

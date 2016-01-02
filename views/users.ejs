@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title> users List </title>
+  <% include head.ejs %>
+ </head>
+ <body>
+ 	<div class="container">
+ 		<table class="table">
+ 			<tbody>
+ 				<% for(var i=0; i< rows.length; i++) {%>
+					<tr>
+						<td> <a href="/user/<%= rows[i].employeeNumber %>"> <%= rows[i].employeeNumber %> </a></td>
+						<td>
+							<%= rows[i].email %>
+						</td>
+						<td>
+							<%= rows[i].firstName %>
+						</td>
+					</tr>
+ 				<% } %>
+ 			</tbody>
+ 		</table>
+ 	</div>
+ </body>
+</html>

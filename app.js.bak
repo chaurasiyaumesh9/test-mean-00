@@ -1,0 +1,25 @@
+var express = require('express');
+var app = express();
+
+app.set("view engine","ejs");
+//app.use( "view", __dirname + "/views");
+
+app.get('/', function( request, response ){
+	response.render("index");
+});
+
+app.get('/user', function( request, response ){
+	response.send("specific user page!");
+});
+
+
+app.get('/user/:id', function( request, response ){
+	response.send("user with id :" + request.params.id );
+});
+
+app.listen(1735, function(){
+	console.log('site running on port 1735..');
+});
+
+
+
